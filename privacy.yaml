@@ -1,0 +1,53 @@
+openapi: 3.1.0
+info:
+  title: Privacy policy
+  version: 1.0.0
+
+servers:
+  - url: https://gpt1-proxy.onrender.com/privacy
+
+privacy_policy:
+  effective_date: "2025-05-01"
+  details: |
+    The IT Transformation Advisor GPT does not collect, store, or share any personal data. All files uploaded during your session are stored temporarily in a secure Google Drive folder. These folders are automatically deleted if no files are uploaded within 5 minutes or once analysis is complete.
+
+  data_retention:
+    description: |
+      We do not retain uploaded files, email addresses, session data, or conversation history beyond the execution period of your analysis.
+
+  consent:
+    description: |
+      This tool is provided for advisory purposes only. Use of this system implies consent to this temporary handling of data as part of the automation process.
+
+  contact:
+    email: "ittransformationadvisor@gmail.com"
+
+terms_of_use:
+  effective_date: "2025-05-01"
+  sections:
+    - title: "Purpose"
+      content: |
+        This tool is provided as an **advisory system** to assist organizations in evaluating and modernizing their IT infrastructure using AI-based insights. It is not intended to replace professional consulting services.
+
+    - title: "Data Responsibility"
+      content: |
+        Users are responsible for the accuracy, relevance, and sensitivity of the data they upload. Please **do not upload confidential, personal, or regulated data**.
+
+    - title: "Session Handling"
+      content: |
+        Uploaded files are processed temporarily and deleted automatically after:
+        - 5 minutes of inactivity (no uploads), or
+        - Completion of analysis and ZIP delivery.
+        
+        The system does not retain any user data beyond the session.
+
+    - title: "No Guarantees"
+      content: |
+        While the GPT modules are built with high accuracy and industry logic, the insights and reports generated are for informational purposes only and may not be fully exhaustive or error-free.
+
+    - title: "Use at Your Own Risk"
+      content: |
+        The IT Transformation Advisor is provided “as is” without warranties of any kind. Users assume full responsibility for how the reports are interpreted and used in decision-making.
+
+  contact:
+    email: "ittransformationadvisor@gmail.com"
