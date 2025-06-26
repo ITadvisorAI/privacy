@@ -1,8 +1,8 @@
-openapi: "3.0.3"
+openapi: "3.1.0"
 info:
   title: "Privacy Policy"
   version: "1.0.0"
-  description: "OpenAPI spec for the IT Transformation Advisor privacy policy"
+  description: "OpenAPI spec for fetching the IT Transformation Advisor privacy policy."
 
 servers:
   - url: "https://privacy-z0u7.onrender.com"
@@ -11,29 +11,13 @@ servers:
 paths:
   /privacy.yaml:
     get:
-      operationId: getPrivacyPolicy           # <— added operationId
-      summary: "Retrieve the Privacy Policy"
-      description: |
-        **Effective Date:** May 1, 2025
-
-        The IT Transformation Advisor GPT does not collect, store, or share any personal data. All files uploaded during your session are stored temporarily in a secure Google Drive folder. These folders are automatically deleted if no files are uploaded within 5 minutes or once analysis is complete.
-
-        We do not retain uploaded files, email addresses, session data, or conversation history beyond the execution period of your analysis.
-
-        This tool is provided for advisory purposes only. Use of this system implies consent to this temporary handling of data as part of the automation process.
-
-        **For questions:** ittransformationadvisor@gmail.com
-
-        **Terms of Use**  
-        1. Purpose: Advisory system to assist IT modernization.  
-        2. Data Responsibility: Don’t upload confidential or regulated data.  
-        3. Session Handling: Files auto-delete after 5 mins inactivity or post-analysis.  
-        4. No Guarantees: Insights are informational and may not be exhaustive.  
-        5. Use at Your Own Risk: Provided “as is” without warranties.
+      operationId: getPrivacyPolicy
+      summary: "Retrieve Privacy Policy"
+      description: "Returns the IT Transformation Advisor Privacy Policy in YAML format."
       responses:
         "200":
-          description: "Privacy policy YAML"
+          description: "Privacy Policy YAML"
           content:
-            text/plain:
+            application/x-yaml:
               schema:
                 type: string
