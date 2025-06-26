@@ -1,18 +1,18 @@
-openapi: "3.1.0"
+openapi: "3.0.3"
 info:
   title: "Privacy Policy"
-  version: "1.0.0"        # must be a string
-  description: |
-    The privacy policy for the IT Transformation Advisor GPT.
+  version: "1.0.0"
+  description: "OpenAPI spec for the IT Transformation Advisor privacy policy"
 
 servers:
   - url: "https://privacy-z0u7.onrender.com"
-    description: Privacy policy host
+    description: "Privacy policy host"
 
 paths:
   /privacy.yaml:
     get:
-      summary: Retrieve the Privacy Policy
+      operationId: getPrivacyPolicy           # <— added operationId
+      summary: "Retrieve the Privacy Policy"
       description: |
         **Effective Date:** May 1, 2025
 
@@ -22,33 +22,18 @@ paths:
 
         This tool is provided for advisory purposes only. Use of this system implies consent to this temporary handling of data as part of the automation process.
 
-        **For questions, please contact:** ittransformationadvisor@gmail.com
+        **For questions:** ittransformationadvisor@gmail.com
 
         **Terms of Use**  
-        By using the IT Transformation Advisor GPT and its supporting tools (including the Google Form, Drive automation, and GPT-driven modules), you agree to the following:
-
-        1. **Purpose**  
-           This tool is provided as an advisory system to assist organizations in evaluating and modernizing their IT infrastructure using AI-based insights. It is not intended to replace professional consulting services.
-
-        2. **Data Responsibility**  
-           Users are responsible for the accuracy, relevance, and sensitivity of the data they upload. Please **do not upload confidential, personal, or regulated data**.
-
-        3. **Session Handling**  
-           Uploaded files are processed temporarily and deleted automatically after:
-           - 5 minutes of inactivity (no uploads), or  
-           - Completion of analysis and ZIP delivery.  
-
-           The system does not retain any user data beyond the session.
-
-        4. **No Guarantees**  
-           While the GPT modules are built with high accuracy and industry logic, the insights and reports generated are for informational purposes only and may not be fully exhaustive or error-free.
-
-        5. **Use at Your Own Risk**  
-           The IT Transformation Advisor is provided “as is” without warranties of any kind. Users assume full responsibility for how the reports are interpreted and used in decision-making.
+        1. Purpose: Advisory system to assist IT modernization.  
+        2. Data Responsibility: Don’t upload confidential or regulated data.  
+        3. Session Handling: Files auto-delete after 5 mins inactivity or post-analysis.  
+        4. No Guarantees: Insights are informational and may not be exhaustive.  
+        5. Use at Your Own Risk: Provided “as is” without warranties.
       responses:
         "200":
-          description: Returns the Privacy Policy in YAML format
+          description: "Privacy policy YAML"
           content:
-            application/x-yaml:
+            text/plain:
               schema:
                 type: string
